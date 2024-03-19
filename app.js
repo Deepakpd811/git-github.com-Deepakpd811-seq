@@ -6,6 +6,8 @@ var seq_obj = new Sequelize("mydbseq", "root", "admin", {
   dialect: "mysql",
 });
 
+
+
 try {
   seq_obj.authenticate().then(() => {
     console.log("connection successfull");
@@ -33,9 +35,11 @@ try {
 //       console.log("record insert" + " " + result.id);
 //     });
 
-    user.findAll({city:"banur"}).then((result)=>{
-        console.log(result)
-    })
+    // user.findAll({city:"banur"}).then((result)=>{
+    //     console.log(result)
+    // })
+
+    
 
 
 } catch (err) {
