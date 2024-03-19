@@ -1,7 +1,7 @@
 var { Sequelize, DataTypes } = require("sequelize");
 
-//////////////////////// ur  database, localhost, password  
-var seq_obj = new Sequelize( "mydbseq", "root",   "admin" , {
+//////////////////////// ur  database, localhost, password
+var seq_obj = new Sequelize("mydbseq", "root", "admin", {
   host: "localhost",
   dialect: "mysql",
 });
@@ -21,16 +21,21 @@ try {
 
   seq_obj.sync();
 
-  user.create({
-    name:"Bully",
-    city:"rajpura",
-    dob:Date("2000-6-5"),
-    address:"punjab",
-    phone:749792450
+//   user
+//     .create({
+//       name: "ritick",
+//       city: "banur",
+//       dob: Date("2003-3-5"),
+//       address: "punjab",
+//       phone: 75893500,
+//     })
+//     .then((result) => {
+//       console.log("record insert" + " " + result.id);
+//     });
 
-}).then((result)=>{
-    console.log("record insert"+" "+ result.id);
-})
+    user.findAll({city:"banur"}).then((result)=>{
+        console.log(result)
+    })
 
 
 } catch (err) {
