@@ -39,6 +39,15 @@ try {
     //     console.log(result)
     // })
 
+
+    // user.destroy({where:{id:2}}).then((result)=>{
+    //   console.log(result);
+    // })
+
+    user.findAll().then((result)=>{
+      console.log(result);
+    });
+
     
 
 
